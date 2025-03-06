@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion Articulos", "Gestion Articulos\Gestion Articulos.csproj", "{A6DACB1B-48CB-43FA-9399-A0ADF2D5E065}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{ADFB7549-4C5C-4FDC-86A3-0008C69C7CF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A6DACB1B-48CB-43FA-9399-A0ADF2D5E065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6DACB1B-48CB-43FA-9399-A0ADF2D5E065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6DACB1B-48CB-43FA-9399-A0ADF2D5E065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADFB7549-4C5C-4FDC-86A3-0008C69C7CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADFB7549-4C5C-4FDC-86A3-0008C69C7CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADFB7549-4C5C-4FDC-86A3-0008C69C7CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFB7549-4C5C-4FDC-86A3-0008C69C7CF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
