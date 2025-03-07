@@ -1,0 +1,6 @@
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\dominio\bin\Debug\dominio.dll
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\dominio\bin\Debug\dominio.pdb
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\dominio\obj\Debug\dominio.dll
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\dominio\obj\Debug\dominio.pdb

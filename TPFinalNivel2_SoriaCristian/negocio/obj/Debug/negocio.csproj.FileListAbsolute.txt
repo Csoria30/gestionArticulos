@@ -1,0 +1,9 @@
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\bin\Debug\negocio.dll
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\bin\Debug\negocio.pdb
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\bin\Debug\dominio.dll
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\bin\Debug\dominio.pdb
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\obj\Debug\negocio.csproj.Up2Date
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\obj\Debug\negocio.dll
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\negocio\obj\Debug\negocio.pdb
