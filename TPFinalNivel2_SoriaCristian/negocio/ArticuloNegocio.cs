@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,7 +43,7 @@ namespace negocio
                     auxiliar.CodigoArticulo = (string)datos.Lector["Codigo"];
                     auxiliar.Nombre = (string)datos.Lector["Nombre"];
                     auxiliar.Descripcion = (string)datos.Lector["Descripcion"];
-                    auxiliar.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    auxiliar.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     
                     auxiliar.DescripcionMarca = new Marca();
                     auxiliar.DescripcionMarca.Descripcion = (string)datos.Lector["Marca"];
@@ -66,5 +67,46 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+    
+        public void agregarArticulo(Articulo nuevoArticulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = @"
+                    INSERT INTO ARTICULOS (	Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) 
+                    VALUES(
+	                    @Codigo,
+	                    @Nombre,
+	                    @Descripcion,
+	                    @IdMarca,
+	                    @IdCategoria,
+	                    @ImagenUrl,
+	                    @Precio
+                    )
+                ";
+
+                datos.setearConsulta(consulta);
+                datos.setearParametro("@Codigo", nuevoArticulo.CodigoArticulo);
+                datos.setearParametro("@Nombre", nuevoArticulo.Nombre);
+                datos.setearParametro("@Descripcion", nuevoArticulo.Descripcion);
+                datos.setearParametro("@IdMarca", nuevoArticulo.DescripcionMarca.Descripcion);
+                datos.setearParametro("@IdCategoria", nuevoArticulo.CategoriaMarca.Descripcion);
+                datos.setearParametro("@ImagenUrl", nuevoArticulo.ImagenUrl);
+                datos.setearParametro("@Precio", nuevoArticulo.precio);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+    
     }
 }
