@@ -17,6 +17,7 @@ namespace Gestion_Articulos
         private Articulo articulo = null;
         private ArticuloNegocio negocio = new ArticuloNegocio();
 
+
         public frmAltaProducto()
         {
             InitializeComponent();
@@ -24,15 +25,14 @@ namespace Gestion_Articulos
 
         private void frmAltaProducto_Load(object sender, EventArgs e)
         {
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
             try
             {
-                cboMarca.DataSource = negocio.listar();
-                cboMarca.ValueMember = "Id";
-                cboMarca.DisplayMember = "DescripcionMarca";
-
-                cboCategoria.DataSource = negocio.listar();
-                cboCategoria.ValueMember = "Id";
-                cboCategoria.DisplayMember = "CategoriaMarca";
+                cboMarca.DataSource = marcaNegocio.listar();
+                cboCategoria.DataSource = categoriaNegocio.listar();
+                
             }
             catch (Exception ex)
             {
