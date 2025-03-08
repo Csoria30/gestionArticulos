@@ -47,8 +47,6 @@ namespace Gestion_Articulos
 
         private void btnAltaAceptar_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
                 if (articulo == null)

@@ -156,13 +156,13 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Location = new System.Drawing.Point(65, 329);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(65, 20);
+            this.lblPrecio.Size = new System.Drawing.Size(52, 16);
             this.lblPrecio.TabIndex = 12;
             this.lblPrecio.Text = "Precio: ";
             // 
             // btnAltaCancelar
             // 
-            this.btnAltaCancelar.Location = new System.Drawing.Point(241, 413);
+            this.btnAltaCancelar.Location = new System.Drawing.Point(252, 413);
             this.btnAltaCancelar.Name = "btnAltaCancelar";
             this.btnAltaCancelar.Size = new System.Drawing.Size(124, 42);
             this.btnAltaCancelar.TabIndex = 14;
@@ -172,7 +172,7 @@
             // 
             // btnAltaAceptar
             // 
-            this.btnAltaAceptar.Location = new System.Drawing.Point(66, 413);
+            this.btnAltaAceptar.Location = new System.Drawing.Point(24, 413);
             this.btnAltaAceptar.Name = "btnAltaAceptar";
             this.btnAltaAceptar.Size = new System.Drawing.Size(124, 42);
             this.btnAltaAceptar.TabIndex = 15;
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 538);
+            this.ClientSize = new System.Drawing.Size(417, 485);
             this.Controls.Add(this.btnAltaAceptar);
             this.Controls.Add(this.btnAltaCancelar);
             this.Controls.Add(this.txtPrecio);
