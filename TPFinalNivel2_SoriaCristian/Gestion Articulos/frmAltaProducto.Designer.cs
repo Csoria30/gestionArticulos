@@ -44,6 +44,8 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.btnAltaCancelar = new System.Windows.Forms.Button();
             this.btnAltaAceptar = new System.Windows.Forms.Button();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -180,11 +182,21 @@
             this.btnAltaAceptar.UseVisualStyleBackColor = true;
             this.btnAltaAceptar.Click += new System.EventHandler(this.btnAltaAceptar_Click);
             // 
+            // pbxArticulo
+            // 
+            this.pbxArticulo.Location = new System.Drawing.Point(372, 50);
+            this.pbxArticulo.Name = "pbxArticulo";
+            this.pbxArticulo.Size = new System.Drawing.Size(299, 206);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticulo.TabIndex = 16;
+            this.pbxArticulo.TabStop = false;
+            // 
             // frmAltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 485);
+            this.ClientSize = new System.Drawing.Size(728, 485);
+            this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.btnAltaAceptar);
             this.Controls.Add(this.btnAltaCancelar);
             this.Controls.Add(this.txtPrecio);
@@ -204,6 +216,7 @@
             this.Name = "frmAltaProducto";
             this.Text = "Nuevo Producto";
             this.Load += new System.EventHandler(this.frmAltaProducto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +240,6 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Button btnAltaCancelar;
         private System.Windows.Forms.Button btnAltaAceptar;
+        private System.Windows.Forms.PictureBox pbxArticulo;
     }
 }

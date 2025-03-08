@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using negocio;
 using dominio;
+using helpers;
 
 namespace Gestion_Articulos
 {
@@ -33,7 +34,7 @@ namespace Gestion_Articulos
                 listaArticulos = negocio.listar();
                 dgvPrincipal.DataSource = listaArticulos;
                 ocultarColumnas();
-                cargarImagen(listaArticulos[0].ImagenUrl);
+                Helpers.CargarImagen(listaArticulos[0].ImagenUrl, pbxArticulo);
 
             }
             catch (Exception ex)
@@ -49,24 +50,13 @@ namespace Gestion_Articulos
             dgvPrincipal.Columns["Categoria"].Visible = false;
         }
 
-        private void cargarImagen(string imagen)
-        {
-            try
-            {
-                pbxArticulo.Load(imagen);
-            }
-            catch (Exception ex)
-            {
-                pbxArticulo.Load("https://archive.org/download/placeholder-image/placeholder-image.jpg");
-            }
-        }
 
         private void dgvPrincipal_SelectionChanged(object sender, EventArgs e)
         {
             if(dgvPrincipal.CurrentRow != null)
             {
                 Articulo articuloSeleccionado = (Articulo)dgvPrincipal.CurrentRow.DataBoundItem;
-                cargarImagen(articuloSeleccionado.ImagenUrl);
+                Helpers.CargarImagen(articuloSeleccionado.ImagenUrl, pbxArticulo);
             }
         }
 
@@ -74,6 +64,16 @@ namespace Gestion_Articulos
         {
             frmAltaProducto altaArticulo = new frmAltaProducto();
             altaArticulo.ShowDialog();
+            cargarArticulos();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvPrincipal.CurrentRow.DataBoundItem;
+
+            frmAltaProducto modificar = new frmAltaProducto(seleccionado);
+            modificar.ShowDialog();
             cargarArticulos();
         }
     }

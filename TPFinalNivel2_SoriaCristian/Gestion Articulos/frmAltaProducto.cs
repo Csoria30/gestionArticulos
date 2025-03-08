@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
 using negocio;
+using helpers;
 
 namespace Gestion_Articulos
 {
@@ -23,6 +24,13 @@ namespace Gestion_Articulos
             InitializeComponent();
         }
 
+        public frmAltaProducto(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
+        }
+
         private void frmAltaProducto_Load(object sender, EventArgs e)
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
@@ -31,7 +39,25 @@ namespace Gestion_Articulos
             try
             {
                 cboMarca.DataSource = marcaNegocio.listar();
+                cboMarca.ValueMember = "Id";
+                cboMarca.DisplayMember = "Descripcion";
+
                 cboCategoria.DataSource = categoriaNegocio.listar();
+                cboCategoria.ValueMember = "Id";
+                cboCategoria.DisplayMember = "Descripcion";
+
+                if(articulo != null)
+                {
+                    txtCodigo.Text = articulo.CodigoArticulo;
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    cboMarca.SelectedValue = articulo.Marca.Id;
+                    cboCategoria.SelectedValue = articulo.Categoria.Id;
+                    txtImagen.Text = articulo.ImagenUrl;
+                    Helpers.CargarImagen(articulo.ImagenUrl, pbxArticulo);
+                    txtPrecio.Text = articulo.precio.ToString();
+                    
+                }
                 
             }
             catch (Exception ex)
@@ -80,5 +106,7 @@ namespace Gestion_Articulos
                 Close();
             }
         }
+
+
     }
 }
