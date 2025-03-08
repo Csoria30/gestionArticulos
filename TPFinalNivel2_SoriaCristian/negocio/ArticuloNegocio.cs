@@ -45,11 +45,13 @@ namespace negocio
                     auxiliar.Descripcion = (string)datos.Lector["Descripcion"];
                     auxiliar.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     
-                    auxiliar.DescripcionMarca = new Marca();
-                    auxiliar.DescripcionMarca.Descripcion = (string)datos.Lector["Marca"];
+                    auxiliar.Marca = new Marca();
+                    auxiliar.Marca.Id = (int)datos.Lector["Id"];
+                    auxiliar.Marca.Descripcion = (string)datos.Lector["Marca"];
 
-                    auxiliar.CategoriaMarca = new Categoria();
-                    auxiliar.CategoriaMarca.Descripcion = (string)datos.Lector["Categoria"];
+                    auxiliar.Categoria= new Categoria();
+                    auxiliar.Categoria.Id = (int)datos.Lector["Id"];
+                    auxiliar.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
                     auxiliar.precio = Convert.ToDouble(datos.Lector["Precio"]);
 
@@ -90,8 +92,8 @@ namespace negocio
                 datos.setearParametro("@Codigo", nuevoArticulo.CodigoArticulo);
                 datos.setearParametro("@Nombre", nuevoArticulo.Nombre);
                 datos.setearParametro("@Descripcion", nuevoArticulo.Descripcion);
-                datos.setearParametro("@IdMarca", nuevoArticulo.DescripcionMarca.Descripcion);
-                datos.setearParametro("@IdCategoria", nuevoArticulo.CategoriaMarca.Descripcion);
+                datos.setearParametro("@IdMarca", nuevoArticulo.Marca.Descripcion);
+                datos.setearParametro("@IdCategoria", nuevoArticulo.Marca.Descripcion);
                 datos.setearParametro("@ImagenUrl", nuevoArticulo.ImagenUrl);
                 datos.setearParametro("@Precio", nuevoArticulo.precio);
 
@@ -129,8 +131,8 @@ namespace negocio
                 datos.setearParametro("@Codigo", articulo.CodigoArticulo);
                 datos.setearParametro("@Nombre", articulo.Nombre);
                 datos.setearParametro("@Descripcion", articulo.Descripcion);
-                datos.setearParametro("@IdMarca", articulo.DescripcionMarca.Descripcion);
-                datos.setearParametro("@IdCategoria", articulo.CategoriaMarca.Descripcion);
+                datos.setearParametro("@IdMarca", articulo.Marca.Descripcion);
+                datos.setearParametro("@IdCategoria", articulo.Marca.Descripcion);
                 datos.setearParametro("@ImagenUrl", articulo.ImagenUrl);
                 datos.setearParametro("@Precio", articulo.precio);
                 datos.setearParametro("@Id", articulo.Id);

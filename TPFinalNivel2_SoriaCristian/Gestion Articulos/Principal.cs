@@ -45,8 +45,8 @@ namespace Gestion_Articulos
         private void ocultarColumnas()
         {
             dgvPrincipal.Columns["ImagenUrl"].Visible = false;                
-            dgvPrincipal.Columns["DescripcionMarca"].Visible = false;
-            dgvPrincipal.Columns["CategoriaMarca"].Visible = false;
+            dgvPrincipal.Columns["Marca"].Visible = false;
+            dgvPrincipal.Columns["Categoria"].Visible = false;
         }
 
         private void cargarImagen(string imagen)
@@ -68,6 +68,13 @@ namespace Gestion_Articulos
                 Articulo articuloSeleccionado = (Articulo)dgvPrincipal.CurrentRow.DataBoundItem;
                 cargarImagen(articuloSeleccionado.ImagenUrl);
             }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaProducto altaArticulo = new frmAltaProducto();
+            altaArticulo.ShowDialog();
+            cargarArticulos();
         }
     }
 }

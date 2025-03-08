@@ -13,3 +13,4 @@ C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Arti
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\obj\Debug\gestion.csproj.Up2Date
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\obj\Debug\Gestion Articulos.exe
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\obj\Debug\Gestion Articulos.pdb
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\obj\Debug\Gestion_Articulos.frmAltaProducto.resources
