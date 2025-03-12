@@ -45,13 +45,15 @@
             this.btnAltaCancelar = new System.Windows.Forms.Button();
             this.btnAltaAceptar = new System.Windows.Forms.Button();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            this.gpbInformacionProducto = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
+            this.gpbInformacionProducto.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(43, 56);
+            this.lblCodigo.Location = new System.Drawing.Point(38, 57);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(57, 16);
             this.lblCodigo.TabIndex = 0;
@@ -59,14 +61,14 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(133, 50);
+            this.txtCodigo.Location = new System.Drawing.Point(128, 51);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(199, 22);
             this.txtCodigo.TabIndex = 1;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(133, 92);
+            this.txtNombre.Location = new System.Drawing.Point(128, 93);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(199, 22);
             this.txtNombre.TabIndex = 3;
@@ -74,7 +76,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(41, 98);
+            this.lblNombre.Location = new System.Drawing.Point(36, 99);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(59, 16);
             this.lblNombre.TabIndex = 2;
@@ -82,7 +84,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(133, 139);
+            this.txtDescripcion.Location = new System.Drawing.Point(128, 140);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(199, 22);
             this.txtDescripcion.TabIndex = 5;
@@ -90,7 +92,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(30, 145);
+            this.lblDescripcion.Location = new System.Drawing.Point(25, 146);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(85, 16);
             this.lblDescripcion.TabIndex = 4;
@@ -99,7 +101,7 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(63, 194);
+            this.lblMarca.Location = new System.Drawing.Point(58, 195);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(51, 16);
             this.lblMarca.TabIndex = 6;
@@ -109,7 +111,7 @@
             // 
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(133, 186);
+            this.cboMarca.Location = new System.Drawing.Point(128, 187);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(197, 24);
             this.cboMarca.TabIndex = 7;
@@ -118,7 +120,7 @@
             // 
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(135, 232);
+            this.cboCategoria.Location = new System.Drawing.Point(130, 233);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(197, 24);
             this.cboCategoria.TabIndex = 9;
@@ -126,7 +128,7 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(53, 236);
+            this.lblCategoria.Location = new System.Drawing.Point(48, 237);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(72, 16);
             this.lblCategoria.TabIndex = 8;
@@ -135,7 +137,7 @@
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(63, 284);
+            this.lblImagen.Location = new System.Drawing.Point(58, 285);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(58, 16);
             this.lblImagen.TabIndex = 10;
@@ -143,14 +145,14 @@
             // 
             // txtImagen
             // 
-            this.txtImagen.Location = new System.Drawing.Point(133, 281);
+            this.txtImagen.Location = new System.Drawing.Point(128, 282);
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(199, 22);
             this.txtImagen.TabIndex = 11;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(135, 326);
+            this.txtPrecio.Location = new System.Drawing.Point(130, 327);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(199, 22);
             this.txtPrecio.TabIndex = 13;
@@ -158,7 +160,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(65, 329);
+            this.lblPrecio.Location = new System.Drawing.Point(60, 330);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(52, 16);
             this.lblPrecio.TabIndex = 12;
@@ -166,7 +168,7 @@
             // 
             // btnAltaCancelar
             // 
-            this.btnAltaCancelar.Location = new System.Drawing.Point(252, 413);
+            this.btnAltaCancelar.Location = new System.Drawing.Point(319, 484);
             this.btnAltaCancelar.Name = "btnAltaCancelar";
             this.btnAltaCancelar.Size = new System.Drawing.Size(124, 42);
             this.btnAltaCancelar.TabIndex = 14;
@@ -176,7 +178,7 @@
             // 
             // btnAltaAceptar
             // 
-            this.btnAltaAceptar.Location = new System.Drawing.Point(24, 413);
+            this.btnAltaAceptar.Location = new System.Drawing.Point(26, 484);
             this.btnAltaAceptar.Name = "btnAltaAceptar";
             this.btnAltaAceptar.Size = new System.Drawing.Size(124, 42);
             this.btnAltaAceptar.TabIndex = 15;
@@ -186,41 +188,52 @@
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(372, 50);
+            this.pbxArticulo.Location = new System.Drawing.Point(478, 41);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(299, 206);
+            this.pbxArticulo.Size = new System.Drawing.Size(317, 296);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 16;
             this.pbxArticulo.TabStop = false;
+            // 
+            // gpbInformacionProducto
+            // 
+            this.gpbInformacionProducto.Controls.Add(this.txtPrecio);
+            this.gpbInformacionProducto.Controls.Add(this.lblPrecio);
+            this.gpbInformacionProducto.Controls.Add(this.txtImagen);
+            this.gpbInformacionProducto.Controls.Add(this.lblImagen);
+            this.gpbInformacionProducto.Controls.Add(this.cboCategoria);
+            this.gpbInformacionProducto.Controls.Add(this.lblCategoria);
+            this.gpbInformacionProducto.Controls.Add(this.cboMarca);
+            this.gpbInformacionProducto.Controls.Add(this.lblMarca);
+            this.gpbInformacionProducto.Controls.Add(this.txtDescripcion);
+            this.gpbInformacionProducto.Controls.Add(this.lblDescripcion);
+            this.gpbInformacionProducto.Controls.Add(this.txtNombre);
+            this.gpbInformacionProducto.Controls.Add(this.lblNombre);
+            this.gpbInformacionProducto.Controls.Add(this.txtCodigo);
+            this.gpbInformacionProducto.Controls.Add(this.lblCodigo);
+            this.gpbInformacionProducto.Location = new System.Drawing.Point(34, 36);
+            this.gpbInformacionProducto.Name = "gpbInformacionProducto";
+            this.gpbInformacionProducto.Size = new System.Drawing.Size(409, 411);
+            this.gpbInformacionProducto.TabIndex = 17;
+            this.gpbInformacionProducto.TabStop = false;
+            this.gpbInformacionProducto.Text = "Informacion del Producto";
             // 
             // frmAltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 485);
+            this.ClientSize = new System.Drawing.Size(841, 561);
+            this.Controls.Add(this.gpbInformacionProducto);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.btnAltaAceptar);
             this.Controls.Add(this.btnAltaCancelar);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.txtImagen);
-            this.Controls.Add(this.lblImagen);
-            this.Controls.Add(this.cboCategoria);
-            this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.cboMarca);
-            this.Controls.Add(this.lblMarca);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.lblCodigo);
             this.Name = "frmAltaProducto";
             this.Text = "Nuevo Producto";
             this.Load += new System.EventHandler(this.frmAltaProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
+            this.gpbInformacionProducto.ResumeLayout(false);
+            this.gpbInformacionProducto.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -243,5 +256,6 @@
         private System.Windows.Forms.Button btnAltaCancelar;
         private System.Windows.Forms.Button btnAltaAceptar;
         private System.Windows.Forms.PictureBox pbxArticulo;
+        private System.Windows.Forms.GroupBox gpbInformacionProducto;
     }
 }

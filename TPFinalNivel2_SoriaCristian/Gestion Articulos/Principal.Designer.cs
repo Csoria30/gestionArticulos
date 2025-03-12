@@ -108,6 +108,7 @@
             this.btnDetalles.TabIndex = 5;
             this.btnDetalles.Text = "Detalles";
             this.btnDetalles.UseVisualStyleBackColor = true;
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // textBox1
             // 

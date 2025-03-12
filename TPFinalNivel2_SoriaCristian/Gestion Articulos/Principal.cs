@@ -76,5 +76,14 @@ namespace Gestion_Articulos
             modificar.ShowDialog();
             cargarArticulos();
         }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvPrincipal.CurrentRow.DataBoundItem;
+
+            frmDetallesProducto detalles = new frmDetallesProducto(seleccionado);
+            detalles.ShowDialog();
+        }
     }
 }
