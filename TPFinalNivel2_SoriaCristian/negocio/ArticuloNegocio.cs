@@ -26,7 +26,9 @@ namespace negocio
                         ImagenUrl, 
                         M.Descripcion Marca, 
                         C.Descripcion Categoria, 
-                        Precio 
+                        Precio,
+	                    A.IdCategoria,
+	                    A.IdMarca
 
                     FROM ARTICULOS A
                         JOIN MARCAS M ON A.IdMarca = M.Id
@@ -46,14 +48,14 @@ namespace negocio
                     auxiliar.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     
                     auxiliar.Marca = new Marca();
-                    auxiliar.Marca.Id = (int)datos.Lector["Id"];
+                    auxiliar.Marca.Id = (int)datos.Lector["IdMarca"];
                     auxiliar.Marca.Descripcion = (string)datos.Lector["Marca"];
 
                     auxiliar.Categoria= new Categoria();
-                    auxiliar.Categoria.Id = (int)datos.Lector["Id"];
+                    auxiliar.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     auxiliar.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
-                    auxiliar.precio = Convert.ToDouble(datos.Lector["Precio"]);
+                    auxiliar.Precio = Convert.ToDouble(datos.Lector["Precio"]);
 
                     listaArticulos.Add(auxiliar);
                 }
@@ -95,7 +97,7 @@ namespace negocio
                 datos.setearParametro("@IdMarca", nuevoArticulo.Marca.Id);
                 datos.setearParametro("@IdCategoria", nuevoArticulo.Categoria.Id);
                 datos.setearParametro("@ImagenUrl", nuevoArticulo.ImagenUrl);
-                datos.setearParametro("@Precio", nuevoArticulo.precio);
+                datos.setearParametro("@Precio", nuevoArticulo.Precio);
 
                 datos.ejecutarAccion();
             }
@@ -134,7 +136,7 @@ namespace negocio
                 datos.setearParametro("@IdMarca", articulo.Marca.Descripcion);
                 datos.setearParametro("@IdCategoria", articulo.Marca.Descripcion);
                 datos.setearParametro("@ImagenUrl", articulo.ImagenUrl);
-                datos.setearParametro("@Precio", articulo.precio);
+                datos.setearParametro("@Precio", articulo.Precio);
                 datos.setearParametro("@Id", articulo.Id);
 
                 datos.ejecutarAccion();

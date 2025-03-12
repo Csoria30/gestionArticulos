@@ -51,11 +51,14 @@ namespace Gestion_Articulos
                     txtCodigo.Text = articulo.CodigoArticulo;
                     txtNombre.Text = articulo.Nombre;
                     txtDescripcion.Text = articulo.Descripcion;
+
                     cboMarca.SelectedValue = articulo.Marca.Id;
                     cboCategoria.SelectedValue = articulo.Categoria.Id;
+                    
                     txtImagen.Text = articulo.ImagenUrl;
                     Helpers.CargarImagen(articulo.ImagenUrl, pbxArticulo);
-                    txtPrecio.Text = articulo.precio.ToString();
+
+                    txtPrecio.Text = articulo.Precio.ToString();
                     
                 }
                 
@@ -84,7 +87,7 @@ namespace Gestion_Articulos
                 articulo.ImagenUrl = txtImagen.Text;
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
-                articulo.precio = float.Parse(txtPrecio.Text);
+                articulo.Precio = float.Parse(txtPrecio.Text);
 
                 if (articulo.Id != 0)
                 {

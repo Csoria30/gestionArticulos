@@ -19,8 +19,7 @@ namespace negocio
             {
                 string consulta = @"
                     Select Id, Descripcion 
-                    FROM MARCAS 
-                    ORDER BY Descripcion
+                    FROM MARCAS
                 ";
 
                 datos.setearConsulta(consulta);
