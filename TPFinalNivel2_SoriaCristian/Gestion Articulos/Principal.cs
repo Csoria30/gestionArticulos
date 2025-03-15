@@ -108,5 +108,16 @@ namespace Gestion_Articulos
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void txtFiltroRapido_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtFiltroRapido.Text;
+            List<Articulo> listaFiltrada = Helpers.FiltrarArticulos(listaArticulos, filtro);
+
+            dgvPrincipal.DataSource = null;
+            dgvPrincipal.DataSource = listaFiltrada;
+            ocultarColumnas();
+
+        }
     }
 }

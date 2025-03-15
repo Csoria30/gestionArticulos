@@ -35,7 +35,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalles = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFiltroRapido = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -111,12 +111,13 @@
             this.btnDetalles.UseVisualStyleBackColor = true;
             this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
-            // textBox1
+            // txtFiltroRapido
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 22);
-            this.textBox1.TabIndex = 6;
+            this.txtFiltroRapido.Location = new System.Drawing.Point(88, 45);
+            this.txtFiltroRapido.Name = "txtFiltroRapido";
+            this.txtFiltroRapido.Size = new System.Drawing.Size(267, 22);
+            this.txtFiltroRapido.TabIndex = 6;
+            this.txtFiltroRapido.TextChanged += new System.EventHandler(this.txtFiltroRapido_TextChanged);
             // 
             // lblBuscar
             // 
@@ -189,7 +190,7 @@
             this.Controls.Add(this.gpbAdmin);
             this.Controls.Add(this.gpbArticulos);
             this.Controls.Add(this.lblBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFiltroRapido);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dgvPrincipal);
             this.Name = "Presentacion";
@@ -213,7 +214,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnDetalles;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFiltroRapido;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;

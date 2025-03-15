@@ -59,5 +59,19 @@ namespace helpers
             }
         }
 
+        //Filtrado de datos
+        public static List<Articulo> FiltrarArticulos(List<Articulo> listaArticulos, string filtro)
+        {
+            if (string.IsNullOrEmpty(filtro) || filtro.Length <= 2)
+            {
+                return listaArticulos;
+            }
+
+            return listaArticulos.FindAll(x =>
+                x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) ||
+                x.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper()) ||
+                x.Nombre.ToUpper().Contains(filtro.ToUpper())
+            );
+        }
     }
 }
