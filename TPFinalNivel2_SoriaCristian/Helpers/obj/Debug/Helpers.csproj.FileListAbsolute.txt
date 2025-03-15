@@ -4,3 +4,6 @@ C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Arti
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Helpers\obj\Debug\Helpers.csproj.CoreCompileInputs.cache
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Helpers\obj\Debug\Helpers.dll
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Helpers\obj\Debug\Helpers.pdb
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Helpers\bin\Debug\dominio.dll
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Helpers\bin\Debug\dominio.pdb
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Helpers\obj\Debug\helpers.csproj.Up2Date

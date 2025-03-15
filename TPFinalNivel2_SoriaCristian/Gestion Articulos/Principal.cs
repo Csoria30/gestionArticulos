@@ -16,6 +16,7 @@ namespace Gestion_Articulos
     public partial class Presentacion : Form
     {
         private List<Articulo> listaArticulos;
+        private ArticuloNegocio negocio = new ArticuloNegocio();
         public Presentacion()
         {
             InitializeComponent();
@@ -28,7 +29,6 @@ namespace Gestion_Articulos
 
         private void cargarArticulos()
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
                 listaArticulos = negocio.listar();
@@ -45,9 +45,8 @@ namespace Gestion_Articulos
     
         private void ocultarColumnas()
         {
+            dgvPrincipal.Columns["Id"].Visible = false;
             dgvPrincipal.Columns["ImagenUrl"].Visible = false;                
-            dgvPrincipal.Columns["Marca"].Visible = false;
-            dgvPrincipal.Columns["Categoria"].Visible = false;
         }
 
 
@@ -84,6 +83,30 @@ namespace Gestion_Articulos
 
             frmDetallesProducto detalles = new frmDetallesProducto(seleccionado);
             detalles.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            try
+            { 
+                string msg = "¿Esta seguro que desea eliminar este articulo?";
+                string titulo = "Eliminar Articulo";
+
+                DialogResult respuesta = MessageBox.Show(msg, titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvPrincipal.CurrentRow.DataBoundItem;
+                    negocio.eliminarArticulo(seleccionado.Id);
+                    Helpers.MostrarMensaje(Helpers.EstadoMensaje.RegistroEliminado);
+                    cargarArticulos();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

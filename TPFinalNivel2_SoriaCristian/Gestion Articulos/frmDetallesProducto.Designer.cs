@@ -31,18 +31,18 @@
             this.pbxDetalleImagen = new System.Windows.Forms.PictureBox();
             this.lblDetalleCodigo = new System.Windows.Forms.Label();
             this.gpbDetalleProducto = new System.Windows.Forms.GroupBox();
+            this.lblTextDetallePrecio = new System.Windows.Forms.Label();
+            this.lblTextDetalleCategoria = new System.Windows.Forms.Label();
+            this.lblTextDetalleMarca = new System.Windows.Forms.Label();
+            this.lblTextDetalleNombre = new System.Windows.Forms.Label();
+            this.lblTextDetalleCodigo = new System.Windows.Forms.Label();
             this.lblDetallePrecio = new System.Windows.Forms.Label();
             this.lblDetalleCategoria = new System.Windows.Forms.Label();
             this.lblDetalleMarca = new System.Windows.Forms.Label();
             this.lblDetalleNombre = new System.Windows.Forms.Label();
             this.gpbDetalle = new System.Windows.Forms.GroupBox();
-            this.btnDetalleCerrar = new System.Windows.Forms.Button();
-            this.lblTextDetalleCodigo = new System.Windows.Forms.Label();
-            this.lblTextDetalleNombre = new System.Windows.Forms.Label();
-            this.lblTextDetalleMarca = new System.Windows.Forms.Label();
-            this.lblTextDetalleCategoria = new System.Windows.Forms.Label();
-            this.lblTextDetallePrecio = new System.Windows.Forms.Label();
             this.lblTextDetalleDescripcion = new System.Windows.Forms.Label();
+            this.btnDetalleCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDetalleImagen)).BeginInit();
             this.gpbDetalleProducto.SuspendLayout();
             this.gpbDetalle.SuspendLayout();
@@ -53,6 +53,7 @@
             this.pbxDetalleImagen.Location = new System.Drawing.Point(443, 44);
             this.pbxDetalleImagen.Name = "pbxDetalleImagen";
             this.pbxDetalleImagen.Size = new System.Drawing.Size(339, 299);
+            this.pbxDetalleImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxDetalleImagen.TabIndex = 0;
             this.pbxDetalleImagen.TabStop = false;
             // 
@@ -83,6 +84,46 @@
             this.gpbDetalleProducto.TabIndex = 2;
             this.gpbDetalleProducto.TabStop = false;
             this.gpbDetalleProducto.Text = "Informacion del Producto";
+            // 
+            // lblTextDetallePrecio
+            // 
+            this.lblTextDetallePrecio.AutoSize = true;
+            this.lblTextDetallePrecio.Location = new System.Drawing.Point(128, 194);
+            this.lblTextDetallePrecio.Name = "lblTextDetallePrecio";
+            this.lblTextDetallePrecio.Size = new System.Drawing.Size(0, 16);
+            this.lblTextDetallePrecio.TabIndex = 10;
+            // 
+            // lblTextDetalleCategoria
+            // 
+            this.lblTextDetalleCategoria.AutoSize = true;
+            this.lblTextDetalleCategoria.Location = new System.Drawing.Point(128, 149);
+            this.lblTextDetalleCategoria.Name = "lblTextDetalleCategoria";
+            this.lblTextDetalleCategoria.Size = new System.Drawing.Size(0, 16);
+            this.lblTextDetalleCategoria.TabIndex = 9;
+            // 
+            // lblTextDetalleMarca
+            // 
+            this.lblTextDetalleMarca.AutoSize = true;
+            this.lblTextDetalleMarca.Location = new System.Drawing.Point(128, 111);
+            this.lblTextDetalleMarca.Name = "lblTextDetalleMarca";
+            this.lblTextDetalleMarca.Size = new System.Drawing.Size(0, 16);
+            this.lblTextDetalleMarca.TabIndex = 8;
+            // 
+            // lblTextDetalleNombre
+            // 
+            this.lblTextDetalleNombre.AutoSize = true;
+            this.lblTextDetalleNombre.Location = new System.Drawing.Point(128, 71);
+            this.lblTextDetalleNombre.Name = "lblTextDetalleNombre";
+            this.lblTextDetalleNombre.Size = new System.Drawing.Size(0, 16);
+            this.lblTextDetalleNombre.TabIndex = 7;
+            // 
+            // lblTextDetalleCodigo
+            // 
+            this.lblTextDetalleCodigo.AutoSize = true;
+            this.lblTextDetalleCodigo.Location = new System.Drawing.Point(128, 39);
+            this.lblTextDetalleCodigo.Name = "lblTextDetalleCodigo";
+            this.lblTextDetalleCodigo.Size = new System.Drawing.Size(0, 16);
+            this.lblTextDetalleCodigo.TabIndex = 6;
             // 
             // lblDetallePrecio
             // 
@@ -130,6 +171,14 @@
             this.gpbDetalle.TabStop = false;
             this.gpbDetalle.Text = "Detalles";
             // 
+            // lblTextDetalleDescripcion
+            // 
+            this.lblTextDetalleDescripcion.AutoSize = true;
+            this.lblTextDetalleDescripcion.Location = new System.Drawing.Point(17, 25);
+            this.lblTextDetalleDescripcion.Name = "lblTextDetalleDescripcion";
+            this.lblTextDetalleDescripcion.Size = new System.Drawing.Size(0, 16);
+            this.lblTextDetalleDescripcion.TabIndex = 11;
+            // 
             // btnDetalleCerrar
             // 
             this.btnDetalleCerrar.Location = new System.Drawing.Point(651, 553);
@@ -140,64 +189,18 @@
             this.btnDetalleCerrar.UseVisualStyleBackColor = true;
             this.btnDetalleCerrar.Click += new System.EventHandler(this.btnDetalleCerrar_Click);
             // 
-            // lblTextDetalleCodigo
-            // 
-            this.lblTextDetalleCodigo.AutoSize = true;
-            this.lblTextDetalleCodigo.Location = new System.Drawing.Point(128, 39);
-            this.lblTextDetalleCodigo.Name = "lblTextDetalleCodigo";
-            this.lblTextDetalleCodigo.Size = new System.Drawing.Size(0, 16);
-            this.lblTextDetalleCodigo.TabIndex = 6;
-            // 
-            // lblTextDetalleNombre
-            // 
-            this.lblTextDetalleNombre.AutoSize = true;
-            this.lblTextDetalleNombre.Location = new System.Drawing.Point(128, 71);
-            this.lblTextDetalleNombre.Name = "lblTextDetalleNombre";
-            this.lblTextDetalleNombre.Size = new System.Drawing.Size(0, 16);
-            this.lblTextDetalleNombre.TabIndex = 7;
-            // 
-            // lblTextDetalleMarca
-            // 
-            this.lblTextDetalleMarca.AutoSize = true;
-            this.lblTextDetalleMarca.Location = new System.Drawing.Point(128, 111);
-            this.lblTextDetalleMarca.Name = "lblTextDetalleMarca";
-            this.lblTextDetalleMarca.Size = new System.Drawing.Size(0, 16);
-            this.lblTextDetalleMarca.TabIndex = 8;
-            // 
-            // lblTextDetalleCategoria
-            // 
-            this.lblTextDetalleCategoria.AutoSize = true;
-            this.lblTextDetalleCategoria.Location = new System.Drawing.Point(128, 149);
-            this.lblTextDetalleCategoria.Name = "lblTextDetalleCategoria";
-            this.lblTextDetalleCategoria.Size = new System.Drawing.Size(0, 16);
-            this.lblTextDetalleCategoria.TabIndex = 9;
-            // 
-            // lblTextDetallePrecio
-            // 
-            this.lblTextDetallePrecio.AutoSize = true;
-            this.lblTextDetallePrecio.Location = new System.Drawing.Point(128, 194);
-            this.lblTextDetallePrecio.Name = "lblTextDetallePrecio";
-            this.lblTextDetallePrecio.Size = new System.Drawing.Size(0, 16);
-            this.lblTextDetallePrecio.TabIndex = 10;
-            // 
-            // lblTextDetalleDescripcion
-            // 
-            this.lblTextDetalleDescripcion.AutoSize = true;
-            this.lblTextDetalleDescripcion.Location = new System.Drawing.Point(17, 25);
-            this.lblTextDetalleDescripcion.Name = "lblTextDetalleDescripcion";
-            this.lblTextDetalleDescripcion.Size = new System.Drawing.Size(0, 16);
-            this.lblTextDetalleDescripcion.TabIndex = 11;
-            // 
             // frmDetallesProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 612);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(845, 641);
             this.Controls.Add(this.btnDetalleCerrar);
             this.Controls.Add(this.gpbDetalle);
             this.Controls.Add(this.gpbDetalleProducto);
             this.Controls.Add(this.pbxDetalleImagen);
             this.Name = "frmDetallesProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetallesProducto";
             this.Load += new System.EventHandler(this.frmDetallesProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxDetalleImagen)).EndInit();

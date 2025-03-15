@@ -91,12 +91,13 @@ namespace Gestion_Articulos
 
                 if (articulo.Id != 0)
                 {
-
+                    negocio.editarArticulo(articulo);
+                    Helpers.MostrarMensaje(Helpers.EstadoMensaje.RegistroEditado);
                 }
                 else
                 {
                     negocio.agregarArticulo(articulo);
-                    MessageBox.Show("Articulo agregado exitosamente!");
+                    Helpers.MostrarMensaje(Helpers.EstadoMensaje.RegistroAgregado);
                 }
 
             }
