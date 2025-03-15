@@ -34,7 +34,7 @@ namespace helpers
             RegistroEliminado
         }
 
-        public static void MostrarMensaje(EstadoMensaje estadoMensaje, Articulo articulo = null)
+        public static void MostrarMensaje(EstadoMensaje estadoMensaje)
         {
             string titulo = "";
             string mensaje = "";
@@ -73,5 +73,17 @@ namespace helpers
                 x.Nombre.ToUpper().Contains(filtro.ToUpper())
             );
         }
+    
+        //Validaciones comunes
+        public static bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+        
     }
 }

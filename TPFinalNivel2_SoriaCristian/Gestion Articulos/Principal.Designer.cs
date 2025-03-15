@@ -43,10 +43,19 @@
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnAgregarCat = new System.Windows.Forms.Button();
             this.gpbAdmin = new System.Windows.Forms.GroupBox();
+            this.gpbFiltroAvanzado = new System.Windows.Forms.GroupBox();
+            this.cboCriterio = new System.Windows.Forms.ComboBox();
+            this.lblCriterio = new System.Windows.Forms.Label();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblfiltroAvanzado = new System.Windows.Forms.Label();
+            this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
+            this.btnFiltroAvanzado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.gpbArticulos.SuspendLayout();
             this.gpbAdmin.SuspendLayout();
+            this.gpbFiltroAvanzado.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPrincipal
@@ -182,11 +191,91 @@
             this.gpbAdmin.TabStop = false;
             this.gpbAdmin.Text = "Admin";
             // 
+            // gpbFiltroAvanzado
+            // 
+            this.gpbFiltroAvanzado.Controls.Add(this.btnFiltroAvanzado);
+            this.gpbFiltroAvanzado.Controls.Add(this.txtFiltroAvanzado);
+            this.gpbFiltroAvanzado.Controls.Add(this.lblfiltroAvanzado);
+            this.gpbFiltroAvanzado.Controls.Add(this.cboCriterio);
+            this.gpbFiltroAvanzado.Controls.Add(this.lblCriterio);
+            this.gpbFiltroAvanzado.Controls.Add(this.cboTipo);
+            this.gpbFiltroAvanzado.Controls.Add(this.lblTipo);
+            this.gpbFiltroAvanzado.Location = new System.Drawing.Point(33, 773);
+            this.gpbFiltroAvanzado.Name = "gpbFiltroAvanzado";
+            this.gpbFiltroAvanzado.Size = new System.Drawing.Size(1078, 95);
+            this.gpbFiltroAvanzado.TabIndex = 11;
+            this.gpbFiltroAvanzado.TabStop = false;
+            this.gpbFiltroAvanzado.Text = "Filtro Avanzado";
+            // 
+            // cboCriterio
+            // 
+            this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCriterio.FormattingEnabled = true;
+            this.cboCriterio.Location = new System.Drawing.Point(358, 40);
+            this.cboCriterio.Name = "cboCriterio";
+            this.cboCriterio.Size = new System.Drawing.Size(147, 24);
+            this.cboCriterio.TabIndex = 15;
+            // 
+            // lblCriterio
+            // 
+            this.lblCriterio.AutoSize = true;
+            this.lblCriterio.Location = new System.Drawing.Point(301, 44);
+            this.lblCriterio.Name = "lblCriterio";
+            this.lblCriterio.Size = new System.Drawing.Size(69, 20);
+            this.lblCriterio.TabIndex = 14;
+            this.lblCriterio.Text = "Criterio: ";
+            // 
+            // cboTipo
+            // 
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Location = new System.Drawing.Point(78, 40);
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(147, 24);
+            this.cboTipo.TabIndex = 13;
+            this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(21, 44);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(41, 16);
+            this.lblTipo.TabIndex = 12;
+            this.lblTipo.Text = "Tipo: ";
+            // 
+            // lblfiltroAvanzado
+            // 
+            this.lblfiltroAvanzado.AutoSize = true;
+            this.lblfiltroAvanzado.Location = new System.Drawing.Point(584, 44);
+            this.lblfiltroAvanzado.Name = "lblfiltroAvanzado";
+            this.lblfiltroAvanzado.Size = new System.Drawing.Size(69, 20);
+            this.lblfiltroAvanzado.TabIndex = 16;
+            this.lblfiltroAvanzado.Text = "Buscar: ";
+            // 
+            // txtFiltroAvanzado
+            // 
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(646, 42);
+            this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
+            this.txtFiltroAvanzado.Size = new System.Drawing.Size(179, 22);
+            this.txtFiltroAvanzado.TabIndex = 17;
+            // 
+            // btnFiltroAvanzado
+            // 
+            this.btnFiltroAvanzado.Location = new System.Drawing.Point(863, 31);
+            this.btnFiltroAvanzado.Name = "btnFiltroAvanzado";
+            this.btnFiltroAvanzado.Size = new System.Drawing.Size(151, 42);
+            this.btnFiltroAvanzado.TabIndex = 18;
+            this.btnFiltroAvanzado.Text = "Buscar";
+            this.btnFiltroAvanzado.UseVisualStyleBackColor = true;
+            this.btnFiltroAvanzado.Click += new System.EventHandler(this.btnFiltroAvanzado_Click);
+            // 
             // Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1530, 784);
+            this.ClientSize = new System.Drawing.Size(1530, 930);
+            this.Controls.Add(this.gpbFiltroAvanzado);
             this.Controls.Add(this.gpbAdmin);
             this.Controls.Add(this.gpbArticulos);
             this.Controls.Add(this.lblBuscar);
@@ -201,6 +290,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.gpbArticulos.ResumeLayout(false);
             this.gpbAdmin.ResumeLayout(false);
+            this.gpbFiltroAvanzado.ResumeLayout(false);
+            this.gpbFiltroAvanzado.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,6 +313,14 @@
         private System.Windows.Forms.Button btnAgregarMarca;
         private System.Windows.Forms.Button btnAgregarCat;
         private System.Windows.Forms.GroupBox gpbAdmin;
+        private System.Windows.Forms.GroupBox gpbFiltroAvanzado;
+        private System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.ComboBox cboCriterio;
+        private System.Windows.Forms.Label lblCriterio;
+        private System.Windows.Forms.TextBox txtFiltroAvanzado;
+        private System.Windows.Forms.Label lblfiltroAvanzado;
+        private System.Windows.Forms.Button btnFiltroAvanzado;
     }
 }
 

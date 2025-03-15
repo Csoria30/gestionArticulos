@@ -25,6 +25,9 @@ namespace Gestion_Articulos
         private void Presentacion_Load(object sender, EventArgs e)
         {
             cargarArticulos();
+            cboTipo.Items.Add("Precio");
+            cboTipo.Items.Add("Nombre");
+            cboTipo.Items.Add("Descripcion");
         }
 
         private void cargarArticulos()
@@ -118,6 +121,79 @@ namespace Gestion_Articulos
             dgvPrincipal.DataSource = listaFiltrada;
             ocultarColumnas();
 
+        }
+
+        private void cboTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboTipo.SelectedItem.ToString();
+
+            if(opcion == "Precio")
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Menor a");
+                cboCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Termina con");
+                cboCriterio.Items.Add("Contiene");
+            }
+        }
+
+        private bool  validarFiltro()
+        {
+            if(cboTipo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor seleccione un campo para filtrar");
+                return true;
+            }
+            if(cboCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor seleccione un campo para filtrar");
+                return true;
+            }
+            if(cboTipo.SelectedItem.ToString() == "Precio")
+            {
+                if (string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+                {
+                    MessageBox.Show("Debe completar el campo buscar");
+                    return true;
+                }
+                if (!(Helpers.soloNumeros(txtFiltroAvanzado.Text)))
+                {
+                    MessageBox.Show("Debe ingresar solo numeros");
+                    return true;
+                }
+            }
+            if (string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+            {
+                MessageBox.Show("El campo filtro no puede estar vacio");
+                return true;
+            }
+
+            return false;
+        }
+
+
+        private void btnFiltroAvanzado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (validarFiltro())
+                    return;
+
+                string tipo = cboTipo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
+                string filtro = txtFiltroAvanzado.Text;
+                dgvPrincipal.DataSource = negocio.filtroAvanzado(tipo, criterio, filtro);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
