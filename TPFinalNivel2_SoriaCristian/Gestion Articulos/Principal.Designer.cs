@@ -168,7 +168,7 @@
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(148, 44);
             this.btnAgregarMarca.TabIndex = 6;
-            this.btnAgregarMarca.Text = "Agregar Marca";
+            this.btnAgregarMarca.Text = "Marcas";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
             // 
             // btnAgregarCat
@@ -177,7 +177,7 @@
             this.btnAgregarCat.Name = "btnAgregarCat";
             this.btnAgregarCat.Size = new System.Drawing.Size(148, 44);
             this.btnAgregarCat.TabIndex = 9;
-            this.btnAgregarCat.Text = "Agregar Categoria";
+            this.btnAgregarCat.Text = "Categorias";
             this.btnAgregarCat.UseVisualStyleBackColor = true;
             // 
             // gpbAdmin

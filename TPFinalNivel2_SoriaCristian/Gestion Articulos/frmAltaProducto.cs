@@ -81,13 +81,28 @@ namespace Gestion_Articulos
                 if (articulo == null)
                     articulo = new Articulo();
 
-                articulo.CodigoArticulo = txtCodigo.Text;
-                articulo.Nombre = txtNombre.Text;
-                articulo.Descripcion = txtDescripcion.Text;
-                articulo.ImagenUrl = txtImagen.Text;
-                articulo.Marca = (Marca)cboMarca.SelectedItem;
-                articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
-                articulo.Precio = float.Parse(txtPrecio.Text);
+                // Validacion de campos vacios
+                var controles = new[] { txtCodigo, txtNombre, txtDescripcion, txtImagen, txtPrecio };
+
+                if (!Helpers.ValidarCampos(controles, this))
+                {
+                    this.DialogResult = DialogResult.None; // Evita que el formulario se cierre
+                    return;
+                }
+                else
+                {
+                    
+                    articulo.CodigoArticulo = txtCodigo.Text;
+                    articulo.Nombre = txtNombre.Text;
+                    articulo.Descripcion = txtDescripcion.Text;
+                    articulo.ImagenUrl = txtImagen.Text;
+                    articulo.Marca = (Marca)cboMarca.SelectedItem;
+                    articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
+                    articulo.Precio = float.Parse(txtPrecio.Text);
+
+                    this.DialogResult = DialogResult.OK; // Cierra el formulario con resultado OK
+                }
+
 
                 if (articulo.Id != 0)
                 {

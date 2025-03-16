@@ -84,6 +84,28 @@ namespace helpers
             }
             return true;
         }
-        
+
+        public static bool ValidarCampos(TextBox[] controles, Form formulario)
+        {
+            foreach (var control in controles)
+            {
+                if (string.IsNullOrEmpty(control.Text))
+                {
+                    formulario.Invoke(new Action(() =>
+                    {
+                        MessageBox.Show($"El campo {control.Name} no puede estar vacío.",
+                                          "Error",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Error,
+                                          MessageBoxDefaultButton.Button1);
+                        control.Select();
+                        control.Focus();
+                    }));
+                    return false;
+                }
+            }
+            return true;
+        }
+
     }
 }
