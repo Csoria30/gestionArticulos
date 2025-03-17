@@ -54,11 +54,12 @@ namespace negocio
                 string consulta = @"
                     INSERT INTO MARCAS (Descripcion)
                     VALUES(
-                        @Categoria
+                        @Descripcion
+                    )
                 ";
 
                 datos.setearConsulta(consulta);
-                datos.setearParametro("@Categoria", marca.Descripcion);
+                datos.setearParametro("@Descripcion", marca.Descripcion);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

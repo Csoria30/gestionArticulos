@@ -17,3 +17,5 @@ C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Arti
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\bin\Debug\Helpers.dll
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\bin\Debug\Helpers.pdb
 C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\obj\Debug\Gestion_Articulos.frmDetallesProducto.resources
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\obj\Debug\Gestion_Articulos.frmMarcas.resources
+C:\Users\crist\Desktop\Dev\_Cursos\TPFinalNivel2_ Soria Cristian - Catalogo Articulos\TPFinalNivel2_SoriaCristian\Gestion Articulos\obj\Debug\Gestion_Articulos.frmCategorias.resources

@@ -195,5 +195,17 @@ namespace Gestion_Articulos
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            frmMarcas marcas = new frmMarcas();
+            marcas.ShowDialog();
+        }
+
+        private void btnAgregarCat_Click(object sender, EventArgs e)
+        {
+            frmCategorias categorias = new frmCategorias();
+            categorias.ShowDialog();
+        }
     }
 }

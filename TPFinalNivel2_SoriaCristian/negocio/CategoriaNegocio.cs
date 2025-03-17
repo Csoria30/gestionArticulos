@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using dominio;
 
@@ -41,33 +42,35 @@ namespace negocio
             {
                 throw ex;
             }
+            finally
+            {
+                datos.cerrarConexion();
+            }
             
             return listaCategoria;
         }
 
-        public void agregarCategoria(Categoria categoriaNueva)
+        public void agregarCategoria(Categoria categoria)
         {
             try
             {
                 string consulta = @"
                     INSERT INTO CATEGORIAS (Descripcion)
                     VALUES(
-                        @Categoria
+                        @Descripcion
                     )
                 ";
 
                 datos.setearConsulta(consulta);
-                datos.setearParametro("@Categoria", categoriaNueva.Descripcion);
+                datos.setearParametro("@Descripcion", categoria.Descripcion);
                 datos.ejecutarAccion();
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            finally
-            {
-                datos.cerrarConexion();
-            }
+            finally { datos.cerrarConexion(); }
         }
 
         public void editarCategoria(Categoria categoria)

@@ -44,13 +44,13 @@
             this.btnAgregarCat = new System.Windows.Forms.Button();
             this.gpbAdmin = new System.Windows.Forms.GroupBox();
             this.gpbFiltroAvanzado = new System.Windows.Forms.GroupBox();
+            this.btnFiltroAvanzado = new System.Windows.Forms.Button();
+            this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
+            this.lblfiltroAvanzado = new System.Windows.Forms.Label();
             this.cboCriterio = new System.Windows.Forms.ComboBox();
             this.lblCriterio = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.lblfiltroAvanzado = new System.Windows.Forms.Label();
-            this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
-            this.btnFiltroAvanzado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.gpbArticulos.SuspendLayout();
@@ -170,6 +170,7 @@
             this.btnAgregarMarca.TabIndex = 6;
             this.btnAgregarMarca.Text = "Marcas";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
             // btnAgregarCat
             // 
@@ -179,6 +180,7 @@
             this.btnAgregarCat.TabIndex = 9;
             this.btnAgregarCat.Text = "Categorias";
             this.btnAgregarCat.UseVisualStyleBackColor = true;
+            this.btnAgregarCat.Click += new System.EventHandler(this.btnAgregarCat_Click);
             // 
             // gpbAdmin
             // 
@@ -207,6 +209,32 @@
             this.gpbFiltroAvanzado.TabStop = false;
             this.gpbFiltroAvanzado.Text = "Filtro Avanzado";
             // 
+            // btnFiltroAvanzado
+            // 
+            this.btnFiltroAvanzado.Location = new System.Drawing.Point(863, 31);
+            this.btnFiltroAvanzado.Name = "btnFiltroAvanzado";
+            this.btnFiltroAvanzado.Size = new System.Drawing.Size(151, 42);
+            this.btnFiltroAvanzado.TabIndex = 18;
+            this.btnFiltroAvanzado.Text = "Buscar";
+            this.btnFiltroAvanzado.UseVisualStyleBackColor = true;
+            this.btnFiltroAvanzado.Click += new System.EventHandler(this.btnFiltroAvanzado_Click);
+            // 
+            // txtFiltroAvanzado
+            // 
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(646, 42);
+            this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
+            this.txtFiltroAvanzado.Size = new System.Drawing.Size(179, 22);
+            this.txtFiltroAvanzado.TabIndex = 17;
+            // 
+            // lblfiltroAvanzado
+            // 
+            this.lblfiltroAvanzado.AutoSize = true;
+            this.lblfiltroAvanzado.Location = new System.Drawing.Point(584, 44);
+            this.lblfiltroAvanzado.Name = "lblfiltroAvanzado";
+            this.lblfiltroAvanzado.Size = new System.Drawing.Size(55, 16);
+            this.lblfiltroAvanzado.TabIndex = 16;
+            this.lblfiltroAvanzado.Text = "Buscar: ";
+            // 
             // cboCriterio
             // 
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -221,7 +249,7 @@
             this.lblCriterio.AutoSize = true;
             this.lblCriterio.Location = new System.Drawing.Point(301, 44);
             this.lblCriterio.Name = "lblCriterio";
-            this.lblCriterio.Size = new System.Drawing.Size(69, 20);
+            this.lblCriterio.Size = new System.Drawing.Size(55, 16);
             this.lblCriterio.TabIndex = 14;
             this.lblCriterio.Text = "Criterio: ";
             // 
@@ -243,32 +271,6 @@
             this.lblTipo.Size = new System.Drawing.Size(41, 16);
             this.lblTipo.TabIndex = 12;
             this.lblTipo.Text = "Tipo: ";
-            // 
-            // lblfiltroAvanzado
-            // 
-            this.lblfiltroAvanzado.AutoSize = true;
-            this.lblfiltroAvanzado.Location = new System.Drawing.Point(584, 44);
-            this.lblfiltroAvanzado.Name = "lblfiltroAvanzado";
-            this.lblfiltroAvanzado.Size = new System.Drawing.Size(69, 20);
-            this.lblfiltroAvanzado.TabIndex = 16;
-            this.lblfiltroAvanzado.Text = "Buscar: ";
-            // 
-            // txtFiltroAvanzado
-            // 
-            this.txtFiltroAvanzado.Location = new System.Drawing.Point(646, 42);
-            this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
-            this.txtFiltroAvanzado.Size = new System.Drawing.Size(179, 22);
-            this.txtFiltroAvanzado.TabIndex = 17;
-            // 
-            // btnFiltroAvanzado
-            // 
-            this.btnFiltroAvanzado.Location = new System.Drawing.Point(863, 31);
-            this.btnFiltroAvanzado.Name = "btnFiltroAvanzado";
-            this.btnFiltroAvanzado.Size = new System.Drawing.Size(151, 42);
-            this.btnFiltroAvanzado.TabIndex = 18;
-            this.btnFiltroAvanzado.Text = "Buscar";
-            this.btnFiltroAvanzado.UseVisualStyleBackColor = true;
-            this.btnFiltroAvanzado.Click += new System.EventHandler(this.btnFiltroAvanzado_Click);
             // 
             // Presentacion
             // 
