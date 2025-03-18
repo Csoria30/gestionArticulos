@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using dominio;
 using negocio;
 using helpers;
+using System.IO;
+using System.Configuration;
 
 namespace Gestion_Articulos
 {
@@ -17,7 +19,7 @@ namespace Gestion_Articulos
     {
         private Articulo articulo = null;
         private ArticuloNegocio negocio = new ArticuloNegocio();
-
+        private OpenFileDialog archivo = null;
 
         public frmAltaProducto()
         {
@@ -115,6 +117,17 @@ namespace Gestion_Articulos
                     Helpers.MostrarMensaje(Helpers.EstadoMensaje.RegistroAgregado);
                 }
 
+                //Guardando imagen local
+                string rutaCarpeta = ConfigurationManager.AppSettings["images-folder"];
+
+                if (archivo != null && !(txtImagen.Text.ToUpper().Contains("HTTP")))
+                {
+                    if (!Directory.Exists(rutaCarpeta))
+                        Directory.CreateDirectory(rutaCarpeta);
+
+                    File.Copy(archivo.FileName, rutaCarpeta + archivo.SafeFileName);
+                }
+
             }
             catch (Exception ex)
             {
@@ -126,6 +139,21 @@ namespace Gestion_Articulos
             }
         }
 
+        private void txtImagen_Leave(object sender, EventArgs e)
+        {
+            Helpers.CargarImagen(txtImagen.Text, pbxArticulo);
+        }
 
+        private void btnAgregarImgLocal_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg;|png|*.png";
+
+            if(archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtImagen.Text = archivo.FileName;
+                Helpers.CargarImagen(archivo.FileName, pbxArticulo);
+            }
+        }
     }
 }

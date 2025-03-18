@@ -46,6 +46,7 @@
             this.btnAltaAceptar = new System.Windows.Forms.Button();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.gpbInformacionProducto = new System.Windows.Forms.GroupBox();
+            this.btnAgregarImgLocal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.gpbInformacionProducto.SuspendLayout();
             this.SuspendLayout();
@@ -149,6 +150,7 @@
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(199, 22);
             this.txtImagen.TabIndex = 11;
+            this.txtImagen.Leave += new System.EventHandler(this.txtImagen_Leave);
             // 
             // txtPrecio
             // 
@@ -197,6 +199,7 @@
             // 
             // gpbInformacionProducto
             // 
+            this.gpbInformacionProducto.Controls.Add(this.btnAgregarImgLocal);
             this.gpbInformacionProducto.Controls.Add(this.txtPrecio);
             this.gpbInformacionProducto.Controls.Add(this.lblPrecio);
             this.gpbInformacionProducto.Controls.Add(this.txtImagen);
@@ -218,17 +221,29 @@
             this.gpbInformacionProducto.TabStop = false;
             this.gpbInformacionProducto.Text = "Informacion del Producto";
             // 
+            // btnAgregarImgLocal
+            // 
+            this.btnAgregarImgLocal.Location = new System.Drawing.Point(343, 280);
+            this.btnAgregarImgLocal.Name = "btnAgregarImgLocal";
+            this.btnAgregarImgLocal.Size = new System.Drawing.Size(50, 26);
+            this.btnAgregarImgLocal.TabIndex = 18;
+            this.btnAgregarImgLocal.Text = "+";
+            this.btnAgregarImgLocal.UseVisualStyleBackColor = true;
+            this.btnAgregarImgLocal.Click += new System.EventHandler(this.btnAgregarImgLocal_Click);
+            // 
             // frmAltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(841, 561);
+            this.ClientSize = new System.Drawing.Size(863, 556);
             this.Controls.Add(this.gpbInformacionProducto);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.btnAltaAceptar);
             this.Controls.Add(this.btnAltaCancelar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmAltaProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Producto";
             this.Load += new System.EventHandler(this.frmAltaProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
@@ -258,5 +273,6 @@
         private System.Windows.Forms.Button btnAltaAceptar;
         private System.Windows.Forms.PictureBox pbxArticulo;
         private System.Windows.Forms.GroupBox gpbInformacionProducto;
+        private System.Windows.Forms.Button btnAgregarImgLocal;
     }
 }
